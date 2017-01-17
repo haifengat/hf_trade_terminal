@@ -29,8 +29,10 @@ namespace HaiFeng
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HFForm));
 			this.comboBoxMsg = new System.Windows.Forms.ComboBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.comboBoxSkins = new System.Windows.Forms.ComboBox();
 			this.buttonLogin = new System.Windows.Forms.Button();
 			this.textBoxPwd = new System.Windows.Forms.TextBox();
 			this.textBoxUser = new System.Windows.Forms.TextBox();
@@ -105,6 +107,7 @@ namespace HaiFeng
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.comboBoxSkins);
 			this.panel1.Controls.Add(this.buttonLogin);
 			this.panel1.Controls.Add(this.textBoxPwd);
 			this.panel1.Controls.Add(this.textBoxUser);
@@ -117,6 +120,18 @@ namespace HaiFeng
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(1343, 34);
 			this.panel1.TabIndex = 0;
+			// 
+			// comboBoxSkins
+			// 
+			this.comboBoxSkins.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.comboBoxSkins.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxSkins.FormattingEnabled = true;
+			this.comboBoxSkins.Location = new System.Drawing.Point(1210, 6);
+			this.comboBoxSkins.Name = "comboBoxSkins";
+			this.comboBoxSkins.Size = new System.Drawing.Size(121, 20);
+			this.comboBoxSkins.Sorted = true;
+			this.comboBoxSkins.TabIndex = 5;
+			this.comboBoxSkins.SelectedIndexChanged += new System.EventHandler(this.comboBoxSkins_SelectedIndexChanged);
 			// 
 			// buttonLogin
 			// 
@@ -600,6 +615,7 @@ namespace HaiFeng
 			this.Controls.Add(this.splitContainer1);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.comboBoxMsg);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "HFForm";
 			this.Text = "海风";
 			this.panel1.ResumeLayout(false);
@@ -672,5 +688,6 @@ namespace HaiFeng
 		private System.Windows.Forms.ComboBox comboBoxOffset;
 		private System.Windows.Forms.ComboBox comboBoxInstrument;
 		private System.Windows.Forms.SplitContainer splitContainer3;
+		private System.Windows.Forms.ComboBox comboBoxSkins;
 	}
 }

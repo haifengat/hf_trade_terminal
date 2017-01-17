@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Sunisoft.IrisSkin;
 
 namespace HaiFeng
 {
@@ -18,7 +19,7 @@ namespace HaiFeng
 			InitializeComponent();
 			this.Load += Form1_Load;
 		}
-
+		SkinEngine _skin = new SkinEngine();
 		HfDataGridView dataGridViewOrder = new HfDataGridView { Name = "order" };
 		HfDataGridView dataGridViewTrade = new HfDataGridView { Name = "trade" };
 		HfDataGridView dataGridViewInstrument = new HfDataGridView { Name = "instrument" };
@@ -45,6 +46,19 @@ namespace HaiFeng
 				_cfg = JsonConvert.DeserializeObject<Config>(File.ReadAllText("./config.json"));
 			else
 				_cfg = new Config();
+
+			if (Directory.Exists("skins"))
+			{
+				foreach (var file in new DirectoryInfo("skins").GetFiles("*.ssk"))
+					this.comboBoxSkins.Items.Add(file.Name.Replace(file.Extension, ""));
+				this.comboBoxSkins.DataBindings.Add("Text", _cfg, "Skin", false, DataSourceUpdateMode.OnPropertyChanged);
+
+				if (string.IsNullOrEmpty(_cfg.Skin)) //默认皮肤
+				{
+					this.comboBoxSkins.SelectedItem = "GlassOrange";
+				}
+			}
+
 			InitControlEvent();
 
 			InitServer();
@@ -621,6 +635,11 @@ namespace HaiFeng
 					_bsOrder.Add(e.Value);
 			}));
 		}
+
+		private void comboBoxSkins_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			_skin.SkinFile = $"skins/{this.comboBoxSkins.SelectedItem.ToString()}.ssk";
+		}
 	}
 
 	internal class Config
@@ -634,6 +653,8 @@ namespace HaiFeng
 		public Size Size { get; set; } = new Size(1200, 800);
 
 		public int QuoteHeight { get; set; } = 120;
+
+		public string Skin { get; set; } = string.Empty;
 
 		public GridStyle OrderLayer { get; set; } = null;
 		public GridStyle TradeLayer { get; set; } = null;
