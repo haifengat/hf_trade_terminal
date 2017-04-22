@@ -441,7 +441,7 @@ namespace HaiFeng
 				var bs = this.dataGridViewQuote.DataSource as BindingSource;
 				if (bs.IndexOf(e.Tick) < 0)
 					bs.Add(e.Tick);
-				if (this.labelPrice.Text == "跟盘价" && e.Tick.InstrumentID == this.comboBoxInstrument.Text)
+				if ((this.labelPrice.Text == "跟盘价" || this.numericUpDownPrice.Value == 0) && e.Tick.InstrumentID == this.comboBoxInstrument.Text)
 				{
 					this.labelUpper.Text = e.Tick.UpperLimitPrice.ToString();
 					this.labelLower.Text = e.Tick.LowerLimitPrice.ToString();
@@ -540,16 +540,6 @@ namespace HaiFeng
 				{
 					_q = (Quote)Activator.CreateInstance(ass.GetType($"HaiFeng.{svr.Type}Quote"), _t);
 					//this.Invoke(new Action(() => this.comboBoxInstrument.Items.Add("000001")));
-					_t.DicInstrumentField["000001"] = new InstrumentField
-					{
-						InstrumentID = "000001",
-						//ExchangeID = "sh",
-						PriceTick = 0.01,
-						ProductClass = ProductClassType.SpotOption,
-						VolumeMultiple = 1,
-						MaxOrderVolume = 1000000000,
-						//ProductID
-					};
 				}
 				else
 					_q = (Quote)Activator.CreateInstance(ass.GetType($"HaiFeng.{svr.Type}Quote"));
