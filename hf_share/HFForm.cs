@@ -150,7 +150,7 @@ namespace HaiFeng
 					Name = "模拟",
 					Broker = "9999",
 					TradeAddr = "tcp://180.168.146.187:10000",
-					QuoteAddr = "ctp://180.168.146.187:10010",
+					QuoteAddr = "tcp://180.168.146.187:10010",
 				});
 				list.Add(new FutureBroker
 				{
@@ -158,7 +158,7 @@ namespace HaiFeng
 					Name = "模拟-非交易",
 					Broker = "9999",
 					TradeAddr = "tcp://180.168.146.187:10030",
-					QuoteAddr = "ctp://180.168.146.187:10031",
+					QuoteAddr = "tcp://180.168.146.187:10031",
 				});
 				//股指仿真-银河,ctp|1010|tcp://simctp1010.yhqh.com:41205|tcp://simctp1010.yhqh.com:41213
 				list.Add(new FutureBroker
@@ -166,8 +166,16 @@ namespace HaiFeng
 					Type = ProxyType.CTP,
 					Name = "仿真-银河",
 					Broker = "1010",
-					TradeAddr = "ctp://simctp1010.yhqh.com:41205",
-					QuoteAddr = "ctp://simctp1010.yhqh.com:41213",
+					TradeAddr = "tcp://simctp1010.yhqh.com:41205",
+					QuoteAddr = "tcp://simctp1010.yhqh.com:41213",
+				});
+				list.Add(new FutureBroker
+				{
+					Type = ProxyType.CTP,
+					Name = "金牛-模拟",
+					Broker = "1010",
+					TradeAddr = "tcp://139.224.80.243:9609",
+					QuoteAddr = "tcp://simctp1010.yhqh.com:41213",
 				});
 				list.Add(new FutureBroker
 				{
