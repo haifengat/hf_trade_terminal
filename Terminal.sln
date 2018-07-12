@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal.csproj", "{868F4567-B685-4916-9D2C-6AD3B10321DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|Any CPU.Build.0 = Debug|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|x64.ActiveCfg = Debug|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|x64.Build.0 = Debug|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|x86.ActiveCfg = Debug|x86
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Debug|x86.Build.0 = Debug|x86
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|x64.ActiveCfg = Release|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|x64.Build.0 = Release|x64
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|x86.ActiveCfg = Release|x86
+		{868F4567-B685-4916-9D2C-6AD3B10321DA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4985052-1B04-476D-9553-EF468371C78E}
+	EndGlobalSection
+EndGlobal
