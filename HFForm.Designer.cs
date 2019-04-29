@@ -31,7 +31,6 @@ namespace HaiFeng
 		{
             this.comboBoxMsg = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxExt = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPwd = new System.Windows.Forms.TextBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
@@ -75,6 +74,12 @@ namespace HaiFeng
             this.tabPagePosi = new System.Windows.Forms.TabPage();
             this.tabPageInfo = new System.Windows.Forms.TabPage();
             this.tabPageInstrument = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxAppID = new System.Windows.Forms.TextBox();
+            this.textBoxAuthCode = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxProductInfo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -106,11 +111,16 @@ namespace HaiFeng
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBoxExt);
             this.panel1.Controls.Add(this.buttonLogin);
+            this.panel1.Controls.Add(this.textBoxProductInfo);
+            this.panel1.Controls.Add(this.textBoxAuthCode);
+            this.panel1.Controls.Add(this.textBoxAppID);
             this.panel1.Controls.Add(this.textBoxPwd);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBoxUser);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.comboBoxServer);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -120,18 +130,9 @@ namespace HaiFeng
             this.panel1.Size = new System.Drawing.Size(1343, 34);
             this.panel1.TabIndex = 0;
             // 
-            // textBoxExt
-            // 
-            this.textBoxExt.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxExt.Location = new System.Drawing.Point(455, 7);
-            this.textBoxExt.Name = "textBoxExt";
-            this.textBoxExt.PasswordChar = '*';
-            this.textBoxExt.Size = new System.Drawing.Size(108, 21);
-            this.textBoxExt.TabIndex = 4;
-            // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(569, 5);
+            this.buttonLogin.Location = new System.Drawing.Point(1027, 6);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
             this.buttonLogin.TabIndex = 5;
@@ -141,7 +142,7 @@ namespace HaiFeng
             // textBoxPwd
             // 
             this.textBoxPwd.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxPwd.Location = new System.Drawing.Point(341, 6);
+            this.textBoxPwd.Location = new System.Drawing.Point(341, 7);
             this.textBoxPwd.Name = "textBoxPwd";
             this.textBoxPwd.PasswordChar = '*';
             this.textBoxPwd.Size = new System.Drawing.Size(108, 21);
@@ -150,7 +151,7 @@ namespace HaiFeng
             // textBoxUser
             // 
             this.textBoxUser.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxUser.Location = new System.Drawing.Point(203, 6);
+            this.textBoxUser.Location = new System.Drawing.Point(203, 7);
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(109, 21);
             this.textBoxUser.TabIndex = 2;
@@ -160,7 +161,7 @@ namespace HaiFeng
             this.comboBoxServer.BackColor = System.Drawing.SystemColors.Control;
             this.comboBoxServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxServer.FormattingEnabled = true;
-            this.comboBoxServer.Location = new System.Drawing.Point(53, 6);
+            this.comboBoxServer.Location = new System.Drawing.Point(53, 7);
             this.comboBoxServer.Name = "comboBoxServer";
             this.comboBoxServer.Size = new System.Drawing.Size(121, 20);
             this.comboBoxServer.TabIndex = 1;
@@ -168,7 +169,7 @@ namespace HaiFeng
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 10);
+            this.label3.Location = new System.Drawing.Point(312, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 0;
@@ -177,7 +178,7 @@ namespace HaiFeng
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 10);
+            this.label2.Location = new System.Drawing.Point(174, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 0;
@@ -186,7 +187,7 @@ namespace HaiFeng
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 0;
@@ -603,6 +604,59 @@ namespace HaiFeng
             this.tabPageInstrument.TabIndex = 2;
             this.tabPageInstrument.Text = "合约信息";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(463, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 12);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "AppID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(650, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "验证码";
+            // 
+            // textBoxAppID
+            // 
+            this.textBoxAppID.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxAppID.Location = new System.Drawing.Point(502, 7);
+            this.textBoxAppID.Name = "textBoxAppID";
+            this.textBoxAppID.Size = new System.Drawing.Size(146, 21);
+            this.textBoxAppID.TabIndex = 2;
+            // 
+            // textBoxAuthCode
+            // 
+            this.textBoxAuthCode.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxAuthCode.Location = new System.Drawing.Point(693, 7);
+            this.textBoxAuthCode.Name = "textBoxAuthCode";
+            this.textBoxAuthCode.PasswordChar = '*';
+            this.textBoxAuthCode.Size = new System.Drawing.Size(147, 21);
+            this.textBoxAuthCode.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(844, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 12);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "ProductInfo";
+            // 
+            // textBoxProductInfo
+            // 
+            this.textBoxProductInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxProductInfo.Location = new System.Drawing.Point(913, 7);
+            this.textBoxProductInfo.Name = "textBoxProductInfo";
+            this.textBoxProductInfo.PasswordChar = '*';
+            this.textBoxProductInfo.Size = new System.Drawing.Size(108, 21);
+            this.textBoxProductInfo.TabIndex = 3;
+            // 
             // HFForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -683,6 +737,11 @@ namespace HaiFeng
 		private System.Windows.Forms.ComboBox comboBoxOffset;
 		private System.Windows.Forms.ComboBox comboBoxInstrument;
 		private System.Windows.Forms.SplitContainer splitContainer3;
-		private System.Windows.Forms.TextBox textBoxExt;
-	}
+        private System.Windows.Forms.TextBox textBoxProductInfo;
+        private System.Windows.Forms.TextBox textBoxAuthCode;
+        private System.Windows.Forms.TextBox textBoxAppID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+    }
 }

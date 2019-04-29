@@ -118,6 +118,7 @@
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TradeExt.cs" />
     <EmbeddedResource Include="HfDataGridView.resx">
       <DependentUpon>HfDataGridView.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +153,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>md $(TargetDir)\dll
-copy $(ProjectDir)resources\dll\*.* $(TargetDir)\dll\*.*</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
