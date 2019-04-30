@@ -628,6 +628,18 @@ namespace HaiFeng
                     _bsOrder.Add(e.Value);
             }));
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if(this.textBoxNewPwd.Text != this.textBoxNewPwdConfirm.Text)
+            {
+                MessageBox.Show("两次输入的密码不一致!", "提醒", MessageBoxButtons.OK);
+            }
+            else
+            {
+                _t.ReqUserPasswordUpdate(this._password, this.textBoxNewPwd.Text);
+            }
+        }
     }
 
     internal class Config
