@@ -78,8 +78,8 @@ namespace HaiFeng
                 _cfg.GetType().GetProperty(gss[i], System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public).SetValue(_cfg, dgvs[i].SaveStyle()); //直接用=赋值,不正确
             }
 
-            File.WriteAllText("./config.json", JsonConvert.SerializeObject(_cfg));
-            File.WriteAllText("./server.json", JsonConvert.SerializeObject((this.comboBoxServer.DataSource as BindingSource).DataSource), Encoding.GetEncoding("GB2312"));
+            File.WriteAllText("./config.json", JsonConvert.SerializeObject(_cfg, Formatting.Indented));
+            File.WriteAllText("./server.json", JsonConvert.SerializeObject((this.comboBoxServer.DataSource as BindingSource).DataSource, Formatting.Indented), Encoding.GetEncoding("GB2312"));
 
             if (_t != null && _t.IsLogin)
                 _t.ReqUserLogout();
