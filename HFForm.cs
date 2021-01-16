@@ -136,8 +136,8 @@ namespace HaiFeng
                     Type = ProxyType.CTP,
                     Name = "模拟",
                     Broker = "9999",
-                    TradeAddr = "tcp://180.168.146.187:13030",
-                    QuoteAddr = "tcp://180.168.146.187:13040",
+                    TradeAddr = "tcp://180.168.146.187:10101",
+                    QuoteAddr = "tcp://180.168.146.187:10111",
                 });
             }
             bsServer = new BindingSource { DataSource = list };
@@ -465,6 +465,7 @@ namespace HaiFeng
             _t.OnRtnNotice += (snd, ea) => ShowMsg($"[{_investor}]提醒信息:{ea.Value}");
 
             ShowMsg($"登录中...");
+            this.Text += $"({_t.Version.Split(' ')[0]})";
             _t.ReqConnect();
         }
 
